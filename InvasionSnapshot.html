@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <title>华东交通大学-天马行空</title>
+    <link rel="shortcut icon" href="hdjt.ico" >
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+<div class="head">
+	<big>夜间防盗系统</big>
+</div>
+<!-- top-nav -->
+<div class="top-nav-btn">
+	<i class="iconfont">&#xe678;</i>
+</div>
+<ul class="top-nav">
+	<li class="active"><a><i class="iconfont">&#xe655;</i>功能首页</a></li>
+	<li><a><i class="iconfont">&#xe603;</i>连接设置</a></li>
+</ul>
+<!-- /top-nav -->
+<!-- wrap -->
+<div class="wrap">
+	<!-- content 01 -->
+	<div class="content">
+		<!-- side-nav -->
+		<ul class="side-nav">
+			<li class="active"><a>功能首页</a></li>
+		</ul>
+		<!-- /side-nav -->
+		<!-- main 01 -->
+		<div class="main container-fluid">
+			<div class="row">
+
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="panel panel-default invarsion panel-height">
+						<div class="panel-heading">人员入侵<span id="infraredLink" class="float-right text-red">离线</span></div>
+						<div class="panel-body text-center">
+							<img id="infraredStatus" class="doorImg" src="img/Invasion.png" alt="">
+						</div>
+					</div>
+				</div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="panel panel-default panel-height mode-set">
+                        <div class="panel-heading">模式设置</div>
+                        <div class="panel-body">
+                            <div class="form-group mode-div form-group col-lg-10 col-md-10 col-sm-10 col-xs-10" style="">
+                                <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                                    <button name="modelBtn" id="familyMode" type="button" class="btn btn-primary btn-big btn-block" onclick="Button.modelBtn($(this))">居家模式</button>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6text-center">
+                                    <button name="modelBtn" id="safetyMode"type="button" class="btn btn-default btn-big btn-block" onclick="Button.modelBtn($(this))">安防模式</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="col-md-4 col-sm-4 col-xs-4">
+					<div class="panel panel-default message-alarm panel-height">
+						<div class="panel-heading">短信报警</div>
+						<div class="panel-body text-center ">
+							<div class="form-inline col-md-6" >
+								<div class="form-group visible-lg" >
+									<div class="input-group w150px">
+										<input id="phoneNum_1" class="form-control" value="13643653436">
+                                        <span class="input-group-btn">
+											  <button id="urgentPhone_1" class="btn btn-primary" type="button">确认</button>
+                                        </span>
+									</div>
+                                    <div class="input-group w150px">
+                                        <input id="phoneNum_2" class="form-control" value="14543657743">
+                                        <span class="input-group-btn">
+											  <button id="urgentPhone_2" class="btn btn-primary" type="button">确认</button>
+                                        </span>
+                                    </div>
+                                    <div class="input-group w150px">
+                                        <input id="phoneNum_3" class="form-control" value="16586535290">
+                                        <span class="input-group-btn">
+											  <button id="urgentPhone_3" class="btn btn-primary" type="button">确认</button>
+                                        </span>
+                                    </div>
+                                    <div class="input-group w150px">
+                                        <input id="phoneNum_4" class="form-control" value="15653734214">
+                                        <span class="input-group-btn">
+											  <button id="urgentPhone_4" class="btn btn-primary" type="button">确认</button>
+                                        </span>
+                                    </div>
+								</div>
+							</div>
+                            <div class="img-div col-md-2">
+                                <div><img src="img/phone-message.png" alt=""/></div>
+                            </div>
+						</div>
+					</div>
+				</div>
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default camera">
+                        <div class="panel-heading">视频监控<span id="cameraLink" class="float-right text-red">离线</span></div>
+                        <div class="panel-body text-center">
+                            <div class="row">
+                                <div class="col-md-7 col-sm-7 col-xs-7">
+                                    <img id="img1" class="cameraBlock" src="img/camera.jpg" alt="">
+                                </div>
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <table class="cameraBtn">
+                                        <tr>
+                                            <td></td>
+                                            
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><button id="ct_up" type="button" class="btn btn-primary btn-block">上</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button id="ct_left" type="button" class="btn btn-primary btn-block">左</button></td>
+                                            <td><button id="switch" type="button" class="btn btn-danger btn-block">开/关</button></td>
+                                            <td><button id="ct_right" type="button" class="btn btn-primary btn-block">右</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><button id="ct_down" type="button" class="btn btn-primary btn-block">下</button></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button id="ct_v" type="button" class="btn btn-primary btn-block">上下巡航</button></td>
+                                            <td><button id="ct_c" type="button" class="btn btn-primary btn-block">全局巡航</button></td>
+                                            <td><button id="ct_h" type="button" class="btn btn-primary btn-block">左右巡航</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+		</div>
+		<!-- /main 01 -->
+	</div>
+	<!-- content 02 -->
+	<div class="content">
+		<!-- side-nav -->
+		<ul class="side-nav">
+			<li><a>云服务器登录配置</a></li>
+			<li><a>人体红外传感器配置</a></li>
+            <li><a>IP摄像头配置</a></li>
+		</ul>
+		<!-- /side-nav -->
+		<!-- main 01 -->
+		<div class="main container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default IDKEY">
+						<div class="panel-heading">云服务器登录配置</div>
+						<div class="panel-body">
+							<div class="form-horizontal">
+								<div class="form-group">
+									<label class="col-md-3 col-sm-2 control-label">ID</label>
+									<div class="col-md-6 col-sm-9">
+										<input id="ID" type="text" class="form-control" value="12345678">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-md-3 col-sm-2 control-label">KEY</label>
+									<div class="col-md-6 col-sm-9">
+										<input id="KEY" type="text" class="form-control" value="***********">
+									</div>
+								</div>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-2 control-label">SERVER</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="server" type="text" class="form-control" value="zhiyun360.com">
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<div class="col-md-offset-3 col-sm-offset-2 col-md-2 col-sm-3 col-xs-6">
+										<button id="idkeyInput" type="button" class="btn btn-primary btn-block">确认</button>
+									</div>
+									<div class="col-md-2 col-sm-3 col-xs-6">
+										<button type="button" class="btn btn-primary btn-block scan">扫描</button>   <!--用于android版扫描获取id key地址，web版无效-->
+									</div>
+                                    <div class="col-md-2 col-sm-3 col-xs-6">
+                                        <button type="button" class="btn btn-warning btn-block share" id="idShare" data-toggle="modal" data-target="#qrModal">分享</button>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /main 01 -->
+		<!-- main 02 -->
+		<div class="main container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default MAC" >
+						<div class="panel-heading">节点设置</div>
+						<div class="panel-body">
+							<div class="form-horizontal">
+								<div class="form-group">
+									<label class="col-md-3 col-sm-3 control-label">人体红外传感器</label>
+									<div class="col-md-6 col-sm-9">
+										<input id="infraredMAC" type="text" class="form-control" value="01:12:4B:00:D2:B3:6F:6E">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-md-offset-3 col-sm-offset-3 col-md-2 col-sm-3 col-xs-3">
+										<button id="macInput" type="button" class="btn btn-primary btn-block">确认</button>
+									</div>
+									<div class="col-md-2 col-sm-3 col-xs-3">
+										<button type="button" class="btn btn-primary btn-block scan">扫描</button>   <!--用于android版扫描获取mac地址，web版无效-->
+									</div>
+                                    <div class="col-md-2 col-sm-3 col-xs-3">
+                                        <button type="button" class="btn btn-warning btn-block share" id="macShare" data-toggle="modal" data-target="#qrModal">分享</button>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /main 02 -->
+        <!-- main 03 -->
+        <div class="main container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading">IP摄像头配置</div>
+                        <div class="panel-body">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 control-label">服务器地址</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="cameraServer" type="text" class="form-control" value="zhiyun360.com:8002">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 control-label">摄像头地址</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="cameraIP" type="text" class="form-control" value="Camera:192.168.00:00">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 control-label">摄像头类型</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="cameraType" type="text" class="form-control" value="H3-Series">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 control-label">用户名</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="cameraUser" type="text" class="form-control" value="admin">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 col-sm-3 control-label">密码</label>
+                                    <div class="col-md-6 col-sm-9">
+                                        <input id="cameraPwd" type="text" class="form-control" value="password">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-3 col-sm-offset-3 col-md-2 col-sm-3 col-xs-6">
+                                        <button id="cameraInput" type="button" class="btn btn-primary btn-block">确认</button>
+                                    </div>
+                                    <div class="col-md-2 col-sm-3 col-xs-6 ">
+                                        <button type="button" class="btn btn-danger btn-block reset" id="cameraReset">重置</button>   <!--同上-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main 03 -->
+		<!-- main 04 -->
+		<div class="main container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">版本信息</div>
+						<div class="panel-body">
+							<p class="text-center">当前版本：<span class="text-red">v1.2.161221</span></p>
+							<div class="form-group">
+								<div class="col-lg-offset-5 col-md-offset-4 col-sm-offset-4 col-lg-2 col-md-4 col-sm-4">
+									<button id="setUp" type="button" class="btn btn-danger btn-block">版本升级</button>
+								</div>
+							</div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-md-offset-4 col-sm-offset-4 col-lg-2 col-md-4 col-sm-4">
+                                    <button type="button" class="btn btn-info btn-block" id="showUpdateTxt" data-toggle="collapse" data-target="#updateTxt">查看升级日志</button>
+                                </div>
+                            </div>
+                            <div id="updateTxt" class="collapse text-center">
+                                <div><b>v.1.2.161209</b> &nbsp;&nbsp;&nbsp;&nbsp;添加localStorage本地保存、分享按钮生成二维码及安卓版本扫码功能</div>
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /main 04 -->
+	</div>
+	<!-- /content 02-->
+</div>
+<!-- /wrap -->
+
+<!--模态框：二维码窗口-->
+<div class="modal fade qrModal" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="qr-txt text-center">请在同款软件的 <br/>“更多信息”-“<span id="shareModalTitle">对应</span>”窗口 <br/>点击“扫描”</div>
+                <div class="qr-div text-center">
+                    <div id="qrDiv"></div>
+                </div>
+                <div class="qr-txt2">注：仅限于分享ID、KEY和MAC地址</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--延时弹出小框-->
+<div id="toast">
+	<span id="toast_txt">
+	</span>
+</div>
+
+<!-- 引入 jquery -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-1.7.2.min.js"></script>
+
+<!--数据查询-->
+<script   src="js/WSN/camera-1.1.js" ></script>
+<script   src="js/WSN/WSNCamera.js" ></script>
+<script   src="js/WSN/WSNHistory.js"></script>
+<script   src="js/WSN/WSNRTConnect.js"></script>
+<script   src="js/WSN/FileSaver.js"></script>
+
+<!--bootstrap插件-->
+<script src="js/bootstrap.min.js"></script>
+<!--qrcode：生成二维码js-->
+<script src="js/qrcode.js"></script>
+<!--主js-->
+<script   src="js/script.js"></script>
+</body>
+</html>

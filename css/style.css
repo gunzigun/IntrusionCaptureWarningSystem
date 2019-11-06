@@ -1,0 +1,467 @@
+html {
+  font-size: 10px; }
+
+body {
+  color: #333;
+  background-color: #ecf0f1; }
+
+/*左上角标题区*/
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 17px 0;
+  width: 160px;
+  height: 70px;
+  color: #eee;
+  text-align: center;
+  background-color: #F2753F; }
+  .head > h1 {
+    font-size: 16px;
+    margin-bottom: 6px; }
+  .head > small{
+    font-size: 11px;
+  }
+
+/*左边功能分栏区*/
+
+.top-nav-btn {
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  top: 12px;
+  right: 10px;
+  z-index: 2;
+  color: #b9ba65; }
+  .top-nav-btn > .iconfont {
+    font-size: 4rem; }
+
+.top-nav {
+  display: block;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 1;
+  padding-bottom: 15px;
+  width: 160px;
+  height: calc(100% - 70px);
+  color: #fff;
+  background-color: #34495e; }
+  .top-nav > li {
+    padding-top: 10px;
+    width: 100%;
+    height: 60px; }
+    .top-nav > li > a {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      padding: 17px 10px 17px 50px;
+      width: 100%;
+      height: 50px; }
+      .top-nav > li > a:hover {
+        background-color: #1e2b38; }
+      .top-nav > li > a > i {
+        position: absolute;
+        top: 13px;
+        left: 16px;
+        font-size: 2.4rem; }
+  .top-nav .active {
+    color: #fff; }
+    .top-nav .active > a {
+      color: #F2753F;
+      background-color: #233342; }
+      .top-nav .active > a > i {
+        color: #F2753F; }
+
+/*右侧内容区*/
+
+.wrap {
+  margin-top: 70px;
+  margin-left: 160px;
+  width: calc(100% - 160px); }
+
+.content {
+  display: none; }
+
+/*右上部内容分栏区*/
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: 160px;
+  width: 100%;
+  height: 71px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e4e5; }
+  .side-nav > li {
+    display: inline-block;
+    padding-top: 40px;
+    padding-left: 40px;
+    height: 70px;
+    vertical-align: bottom; }
+    .side-nav > li > a {
+      cursor: pointer;
+      display: block;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 30px; }
+      .side-nav > li > a:hover {
+        border-bottom: 3px solid #F2753F; }
+  .side-nav .active > a {
+    border-bottom: 3px solid #F2753F; }
+
+/*主内容区*/
+
+.main {
+  display: none;
+  padding: 40px; }
+
+.chartBlock {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 100%;
+  max-width: 240px;
+  height: 240px; }
+
+.dialBlock {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 100%;
+  max-width: 480px;
+  height: 240px; }
+
+.imgBlock {
+  margin: 0 auto 15px auto;
+  width: 100%;
+  max-width: 120px; }
+
+.historyBtn {
+  display: block;
+  margin-right: 20px; }
+  .historyBtn > li {
+    display: inline-block;
+    float: right;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #aaa;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: 0; }
+    .historyBtn > li:hover {
+      background-color: #eee; }
+    .historyBtn > li:last-child {
+      border-left: 1px solid #ccc; }
+
+/* panel */
+
+.panel {
+  margin-bottom: 20px;
+  color: #999;
+  background-color: #fff;
+  border: 1px solid #e0e4e5; }
+  .panel > .panel-heading {
+    padding: 6px 15px;
+    font-weight: bold;
+    line-height: 1.5em;
+    border-bottom: 1px solid #e0e4e5; }
+  .panel > .panel-body {
+    font-size: 1.4rem;
+    line-height: 1.5em; }
+    .panel > .panel-body p {
+      margin-bottom: 15px; }
+
+/* text */
+
+.text-center {
+  text-align: center; }
+
+.float-right {
+  float: right; }
+
+.text-red {
+  color: #e75d59; }
+
+.text-green {
+  color: #b9ba65; }
+
+/* input */
+
+.w150px {
+  width: 180px; }
+
+.form-group:after,
+.form-horizontal .form-group:after,
+.panel .panel-body:after,
+.historyBtn:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both; }
+
+.form-inline .input-group {
+  display: inline-table;
+  vertical-align: middle; }
+
+.input-group-addon:last-child {
+  border-left: 0; }
+
+.input-group-addon {
+  display: table-cell;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #eee;
+  border: 1px solid #ccc; }
+
+/* button */
+
+.btn {
+  display: inline-block;
+  padding: 0.5vw 0.5vw;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent; }
+
+.btn-default {
+  color: #aaa;
+  background-color: #fff;
+  border-color: #ccc; }
+
+.btn-default:hover {
+  background-color: #f2f2f2; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #F2753F;
+  border-color: #F2753F; }
+
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus {
+  border-color: #CC6335;
+  outline: none !important;
+  background-color: #CC6335; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #C80D0D;
+  border-color: #C80D0D; }
+
+.btn-danger:hover,.btn-danger:focus,.btn-danger:active {
+  outline: none !important;
+  border-color: #e44743;
+  background-color: #e44743; }
+
+.btn-block {
+  display: block;
+  width: 100%; }
+
+.btn-big {
+  font-size: 1.4vw;
+  font-weight: bold;
+  line-height: 6vw; }
+
+/*人员入侵*/
+
+.doorImg{
+  width:50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+/*模式设置*/
+
+.mode-div{
+  position: absolute;
+  left:10%;
+  right:10%;
+  margin: 6px 0 20px 0;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+
+.mode-div div{
+  padding:0.1vw 0.7vw !important;
+}
+
+.visible-lg{
+  display: inline-block;
+}
+
+/*短信报警*/
+
+.message-alarm .input-group{
+  margin:0 0 10px 0 !important;
+  z-index: 99;
+}
+
+.message-alarm .panel-body{
+  padding-top: 4vw;
+}
+
+.message-alarm img{
+  width:9vw;
+  margin: 1vw 0 0 2vw;
+}
+
+/*视频监控*/
+
+.camera{
+  height:30vw;
+}
+
+.camera .panel-body{
+  padding:10px;
+}
+
+.camera-img img{
+  width:515px;
+  margin:20px 0;
+}
+
+.camera .camera-photo{
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+
+.cameraBlock {
+  display: block;
+  margin: 10px auto 15px auto;
+  width: 100%;
+  max-width: 640px;
+  border: 1px solid #e0e4e5; }
+
+.cameraBtn {
+  margin: 0.5vw 0;
+  width: 100%; }
+.cameraBtn td {
+  padding: 1vw; }
+.cameraBtn td > .btn-block {
+  width:7vw;
+  padding:0;
+  line-height: 2.5vw; }
+
+.cameraBtn #photo-btn{
+  background: url('../img/photo.png') no-repeat 21% 55% #ffBF4D;
+  border-color: #FFBF4D;
+  background-size: 2vw;
+  text-align: left;
+  text-indent: 50%;
+}
+
+.cameraBtn #photo-btn:hover{
+  background-color: #FFAF00;
+}
+
+.message-alarm button{
+  border:none !important;
+}
+
+/*panel统一高度*/
+
+.panel-height{
+  height:22vw;
+}
+
+/*id key mac地址*/
+
+.IDKEY .form-horizontal,.MAC .form-horizontal{
+  margin: 40px 0;
+}
+.MAC{
+  height: 220px;
+}
+
+/*二维码生成弹出框*/
+
+.modal-dialog{
+  width:380px !important;
+  margin:100px auto;
+}
+
+#shareModalTitle{
+  font-weight: bolder;
+  color:red;
+}
+
+.qr-txt{
+  line-height: 2vw;
+}
+
+.qr-txt2{
+  font-size: 0.8vw;
+  font-weight: 900;
+  text-align: center;
+}
+
+#qrDiv{
+  width:200px;
+  height:200px;
+  text-align: center;
+  margin:2vw auto;
+}
+
+/*延时弹出框*/
+
+#toast{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left:50%;
+    top:70%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    padding: 0.8em;
+    text-align: center;
+    background: #444;
+    color:#efefef;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/*媒体查询：屏幕宽度在750px下显示*/
+
+@media (max-width: 750px) {
+  .top-nav-btn {
+    display: inline-block; }
+
+  .top-nav {
+    display: none;
+    left: auto;
+    right: 0;
+    height: auto; }
+
+  .wrap {
+    margin-left: 0;
+    width: 100%; }
+}
